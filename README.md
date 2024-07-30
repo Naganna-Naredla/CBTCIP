@@ -19,38 +19,42 @@ Deployment: Render (for live deployment)
 
 Project Structure
 
-project-directory
-│
-├── models
-│   ├── contact.js         # Mongoose model for contact information
-│   ├── review.js          # Mongoose model for event reviews
-│   └── plan.js            # Mongoose model for event plans
-│
-├── routes
-│   ├── contacts.js        # Routes for contact management
-│   ├── reviews.js         # Routes for review management
-│   └── plans.js           # Routes for event plans
-│
-├── public
-│   ├── J_Script.js        # Custom JavaScript file
-│   ├── Lookit.html        # Placeholder HTML file
-│   ├── StartPlan.css      # CSS for the Start Planning page
-│   ├── StartPlan.js       # JavaScript for the Start Planning page
-│   ├── index.html         # Main landing page
-│   ├── login.css          # CSS for the login page
-│   ├── login.html         # Login page HTML
-│   ├── login.js           # JavaScript for the login page
-│   ├── plans.css          # CSS for the plans page
-│   ├── plans.html         # Plans page HTML
-│   ├── plans.js           # JavaScript for the plans page
-│   └── images.jpg         # Some images 
-├── server.js              # Main server file
-├── package.json           # Project dependencies and scripts
-├── package-lock.json      # Locked versions of project dependencies
-├── Procfile               # Deployment configuration for Render
-├── .gitignore             # Specifies files and directories to be ignored by Git
-└── README.md              # Project documentation
+ -> models/: Contains Mongoose models for MongoDB.
+     contact.js
+     review.js
+     plan.js
+     
+ -> routes/: Contains Express route handlers.
+     contacts.js
+     reviews.js
+     plans.js
 
+ -> public/: Contains static assets and frontend files.
+
+     J_Script.js
+     Lookit.html
+     StartPlan.css
+     StartPlan.js
+     index.html
+     login.css
+     login.html
+     login.js
+     plans.css
+     plans.html
+     plans.js
+     (Other images)
+
+ -> server.js: Main server file to start the application.
+
+ -> package.json: Project dependencies and scripts.
+
+ -> package-lock.json: Dependency lock file.
+
+ -> Procfile: Process file for deployment (e.g., with Heroku).
+
+ -> .gitignore: Specifies files and directories to be ignored by Git.
+
+ -> README.md: Project documentation.
 
 Getting Started
 
