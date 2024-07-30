@@ -57,7 +57,9 @@ Getting Started
 Prerequisites:
 
 Node.js (v20.15.1),
+
 MongoDB Atlas account
+
 
 Installation:
 
@@ -65,13 +67,16 @@ Clone the repository:
 
 git clone https://github.com/Naganna-Naredla/EventPlanner360.git
 
+
 Navigate to the project directory:
 
 cd EventPlanner360
 
+
 Install dependencies:
 
 npm install
+
 
 Set up environment variables:
 
@@ -91,15 +96,15 @@ Access the application:
 
 Open your browser and go to http://localhost:5000 to view the application.
 
-Deployment
+Deployment:
 
 The project is deployed on Render. You can access the live application https://eventplanner360.onrender.com.
 
-Contributing
+Contributing:
 
 If you'd like to contribute to the project, please fork the repository and submit a pull request.
 
 
+Contact:
 
-Contact
 For any inquiries or feedback, please contact naganna3579@gmail.com.
