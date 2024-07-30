@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPlanner360</title>
+    <link rel="stylesheet" href="StartPlan.css">
+    <script src="StartPlan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="navbar-brand">
+                <a href="/">
+                    <img src="logo.png" alt="EventPlanner_Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button class="search-icon">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="navbar-menu">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="start-planning">
+            <div class="container">
+                <div class="breaking-news">
+                    <h1>Start Planning Now</h1>
+                    <p>Welcome to EventPlanner360. Begin planning your dream event today with our comprehensive tools and services.</p>
+                </div>
+                <div class="planning-options">
+                    <div class="brochure">
+                        <h2>Event Brochure</h2>
+                        <div class="brochure-container">
+                            <img src="ev.jpg" alt="Brochure 1" onclick="openModal(this.src)">
+                            <img src="ev1.jpg" alt="Brochure 2" onclick="openModal(this.src)">
+                        </div>
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                        <div class="planning-form">
+                            <h2>Plan Your Event</h2>
+                            <div class="planForm">
+                                <form id="planForm" action="/api/plans" method="POST">
+                                    <label for="event-type">Event Type:</label>
+                                    <select id="event-type" name="eventType"> <!-- Changed from "event-type" to "eventType" -->
+                                        <option value="wedding">Wedding</option>
+                                        <option value="birthday">Birthday</option>
+                                        <option value="corporate">Corporate Event</option>
+                                    </select>
+                                    <label for="food">Food System:</label>
+                                    <select id="food" name="food">
+                                        <option value="buffet">Buffet</option>
+                                        <option value="plated">Plated Service</option>
+                                        <option value="Beverage">Beverage Service</option>
+                                    </select>
+                                    <label for="venue">Venue Selection:</label>
+                                    <select id="venue" name="venue">
+                                        <option value="outdoor">Outdoor</option>
+                                        <option value="indoor">Indoor</option>
+                                        <option value="destination">Destination</option>
+                                    </select>
+                                    <label for="name">Your Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                    <label for="email">Email Address:</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                    <label for="event-date">Event Date:</label>
+                                    <input type="date" id="event-date" name="eventDate" required> <!-- Changed from "event-date" to "eventDate" -->
+                                    <label for="payment">Payment Method:</label>
+                                    <select id="payment" name="payment">
+                                        <option value="credit-card">Credit Card</option>
+                                        <option value="debit-card">Debit Card</option>
+                                        <option value="paypal">PayPal</option>
+                                        <option value="bank-transfer">Bank Transfer</option>
+                                    </select>
+                                    <button type="submit" class="btn">Submit</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 EventPlanner360. All rights reserved.</p>
+        </div>
+    </footer>
+    bo

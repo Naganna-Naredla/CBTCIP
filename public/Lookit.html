@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Items</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 15px;
+        }
+        .breaking-news h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: purple;
+           }
+
+       .breaking-news p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: #ffcc00;
+       }
+   
+         .breaking-news-container {
+               position: relative;
+               overflow: hidden;
+            background-color: #000; /* Background color for the news ticker */
+            color: #fff; /* Text color */
+            width: 100%;
+            padding: 10px 0;
+        }
+
+       .breaking-news {  
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll-left 15s linear infinite;
+        
+        }
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+  
+        .navbar-brand img {
+            max-height: 75px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        .item-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffcc00;; /* Light background with slight transparency */
+            overflow: hidden; /* Ensures no overflow issues */
+        }
+        .item-container img {
+            max-width: 50%; /* Image takes 50% width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .item-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .item-content h3 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .item-content p {
+            margin-bottom: 10px;
+            color: purple;
+        }
+
+        .item-actions {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .item-actions .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: 10px solid #f9f9f9;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .item-actions .btn:hover {
+            
+            border-radius: 25%;
+            border: 10px solid #f9f9f9;
+            color: #ffcc00;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .sub-item {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .sub-item h4 {
+            margin-top: 0;
+        }
+
+        .sub-item p {
+            margin-bottom: 0;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+    /* Header */
+    .header-content {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .navbar-brand img {
+        max-width: 150px; /* Adjust logo size */
+        margin-bottom: 10px; /* Space below logo */
+    }
+
+    .navbar-menu {
+        display: none; /* Hide menu initially */
+    }
+
+    /* Breaking News */
+    .breaking-news h1 {
+        font-size: 2rem; /* Adjust heading size */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .breaking-news p {
+        font-size: 1rem; /* Adjust paragraph size */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    /* Item Container */
+    .item-container {
+        flex-direction: column; /* Stack items vertically */
+        margin: 10px; /* Adjust margin */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .item-container img {
+        max-width: 100%; /* Ensure images resize properly */
+        margin-bottom: 10px; /* Space below image */
+    }
+
+    .item-content {
+        padding: 0; /* Remove horizontal padding */
+    }
+
+    .item-content h3 {
+        margin-top: 10px; /* Adjust top margin */
+        text-align: center; /* Center align heading */
+    }
+
+    .item-content p {
+        margin-bottom: 10px; /* Adjust bottom margin */
+        text-align: center; /* Center align paragraph */
+    }
+
+    .item-actions {
+        text-align: center; /* Center align actions */
+        margin-top: 10px; /* Adjust top margin */
+    }
+
+    .item-actions .btn {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px; /* Adjust footer padding */
+        text-align: center; /* Center align text */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img src="logo1.png" alt="EventPlanner_Logo">
+                </a>
+            </div>
+            <nav class="navbar-menu">
+                <a href="index.html#Home">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="section-items">
+            <div class="container">
+                    <div class="container">
+                        <div class="breaking-news"><h1>Start Planning Now</h1>
+                        <p>Welcome to EventPlanner360. Begin planning your dream event today with our comprehensive tools and services.</p>
+                    </div>
+               
+                <div class="item-container">
+                    <img src="birthday.jpg" alt="Birthday Event">
+                    <div class="item-content">
+                        <h3>Birthday Event</h3>
+                        <p>
+                            Enjoy an unforgettable birthday celebration with our expert planning services. We ensure every detail is perfect, from decorations to entertainment, making your special day truly memorable.
+                        </p>
+                        <div class="price-tag">Rs. 20599.00</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+             
+                <div class="item-container">
+                    <img src="wedding.jpeg" alt="Wedding Event">
+                    <div class="item-content">
+                        <h3>Wedding Event</h3>
+                        <p>
+                            Plan your dream wedding with us. From venues to catering, we ensure your special day is elegant and stress-free.
+                        </p>
+                        <div class="price-tag">Rs. 155999.00</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+             
+                <div class="item-container">
+                    <img src="conference.jpg" alt="Conference Event">
+                    <div class="item-content">
+                        <h3>Conference Event</h3>
+                        <p>
+                            Host successful conferences with our comprehensive planning services. We manage everything from venue selection to audiovisual setups.
+                        </p>
+                        <div class="price-tag">Rs. 14999.00</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                    <img src="food1.jpg" alt="Food">
+                    <div class="item-content">
+                        <h3>Buffet</h3>
+                        <p>
+                            Choose from a variety of exquisite cuisines, crafted by our skilled chefs.
+                        <div class="price-tag">Rs. 299 per One</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                    <img src="food2.avif" alt="Food">
+                    <div class="item-content">
+                        <h3>Plated Service</h3>
+                        <p>
+                            Professional service staff to ensure impeccable service during your event.
+                        </p>
+                        <div class="price-tag">Rs. 499.00 per One</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                    <img src="food3.jpg" alt="Beverage">
+                    <div class="item-content">
+                        <h3>Beverage Service</h3>
+                        <p>
+                            Refreshing beverages and cocktails to complement your event's theme.
+                        </p>
+                        <div class="price-tag">Rs. 449.00 per One</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                    <img src="venue1.jpg" alt="Outdoor Venue">
+                    <div class="item-content">
+                        <h3>Outdoor</h3>
+                        <p>
+                            Scenic outdoor venues with beautiful landscapes for memorable events.
+                        </p>
+                        <div class="price-tag">Rs. 259999.00</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                    <img src="venue2.jpg" alt="Indoor">
+                    <div class="item-content">
+                        <h3>Indoor</h3>
+                        <p>
+                            Elegant indoor venues perfect for weddings, conferences, and other events.
+                        </p>
+                        <div class="price-tag">Rs. 299999.00</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+                <div class="item-container">
+                    <img src="venue3.jpg"alt="Destination">
+                    <div class="item-content">
+                        <h3>Destination</h3>
+                        <p>
+                            Add-ons such as audiovisual equipment, seating arrangements, and more.
+                        </p>
+                        <div class="price-tag">Rs. 499999.00</div> 
+                    </div>
+                    <div class="item-actions">
+                        <a href="start.html" class="btn">Book in Advance</a>
+                    </div>
+                </div>
+
+            
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 EventPlanner360. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

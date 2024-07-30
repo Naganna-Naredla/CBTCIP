@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to EventPlanner360</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>EventPlanner360</h1>
+    </div>
+    <div class="role-selection">
+        <button id="customerBtn">Customer</button>
+        <button id="ownerBtn">Owner</button>
+    </div>
+    <div class="login-container hidden" id="customer-login">
+        <div class="login-box">
+            <h2>Customer Login</h2>
+            <form id="customerLoginForm">
+                <div class="form-group">
+                    <label for="customerEmail">Email:</label>
+                    <input type="email" id="customerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPassword">Password:</label>
+                    <input type="password" id="customerPassword" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="login-container hidden" id="owner-login">
+        <div class="login-box">
+            <h2>Owner Login</h2>
+            <form id="ownerLoginForm">
+                <div class="form-group">
+                    <label for="ownerEmail">Email:</label>
+                    <input type="email" id="ownerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="ownerPassword">Password:</label>
+                    <input type="password" id="ownerPassword" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div id="ownerContent" class="hidden">
+                <button id="viewPlansAndQueriesBtn">View Plans and Queries</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
