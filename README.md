@@ -20,11 +20,13 @@ Deployment: Render (for live deployment)
 Project Structure
 
  -> models/: Contains Mongoose models for MongoDB.
+
      contact.js
      review.js
      plan.js
-     
+
  -> routes/: Contains Express route handlers.
+ 
      contacts.js
      reviews.js
      plans.js
