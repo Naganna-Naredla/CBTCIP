@@ -90,8 +90,6 @@ Create a .env file in the root directory and add the following variables:
 
 The IP Address for Mongo URi is active till one week, Which is created temporarly on MongoDB Atlas Account. 
 
-MONGO_URI=mongodb+srv://naganna3579:nagannan@cluster0.pgjrnjh.mongodb.net/
-
 PORT=5000
 
 
